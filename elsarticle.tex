@@ -1,0 +1,40 @@
+\documentclass[3p,onecolumn]{elsarticle}
+
+\input{./backend/packages}
+\input{./backend/literature}
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{My Title}
+
+\author{M.~Diehl\corref{cor1}}
+\ead{m.diehl@mpie.de}
+\cortext[cor1]{Corresponding author}
+
+\address{Max-Planck-Institut f\"ur Eisenforschung, Max-Planck-Str.~1, 40237 D\"usseldorf, Germany}
+
+\begin{abstract}
+My abstract
+\end{abstract}
+
+\begin{keyword}
+keyword 1\sep keyword 2
+\end{keyword}
+
+\end{frontmatter}
+
+\tableofcontents
+
+
+\section{Section 1}
+\cite{Eisenlohr_etal2013}
+\printbibliography
+
+\begin{appendices}
+\section{Appendix 1}
+\end{appendices}
+
+\end{document}
