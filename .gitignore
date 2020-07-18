@@ -8,3 +8,5 @@
 *.spl
 *.synctex*
 *.toc
+*.bbl
+*.blg

@@ -1,7 +1,7 @@
 \documentclass[3p,onecolumn]{elsarticle}
 
+\input{./backend/bibtex}
 \input{./backend/packages}
-\input{./backend/literature}
 
 
 \begin{document}
@@ -30,8 +30,9 @@ keyword 1\sep keyword 2
 
 
 \section{Section 1}
-\cite{Eisenlohr_etal2013}
-\printbibliography
+\cite{EisenlohrEtAl2013}
+
+\bibliography{\bibfile}
 
 \begin{appendices}
 \section{Appendix 1}
