@@ -1,6 +1,10 @@
 \usepackage[backend=biber]{biblatex}
 
-\addbibresource{/home/m/Documents/Literature/literature.bib} %Bibliographiedateien laden
+%Bibliographiedateien laden
+\IfFileExists{\string~/Documents/Literature/literature.bib}
+{\addbibresource{\string~/Documents/Literature/literature.bib}}
+\IfFileExists{./literature.bib}
+{\addbibresource{./literature.bib}}
 
 \ExecuteBibliographyOptions{
 sorting=nyt, %Sortierung Autor, Titel, Jah
