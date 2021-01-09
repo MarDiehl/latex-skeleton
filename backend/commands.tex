@@ -1,0 +1,188 @@
+%EDITORIAL STUFF
+\newcommand{\responsible}[1]{\textcolor{BurntOrange}{~~(#1)}}
+\newcommand{\external}[2]{\textcolor{Red}{#1\responsible{#2}}}
+\newcommand{\question}[1]{\textcolor{Red}{#1?}}
+\newcommand{\note}[1]{\textcolor{CornflowerBlue}{#1}}
+\newcommand{\revision}[1]{\textcolor{BurntOrange}{#1}}
+
+\newcommand{\term}[1]{\textsc{#1}}
+%ABBREVIATIONS
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\cf}{\textit{cf.}}
+
+\newcommand{\kB}{\ensuremath{k_\text{B}}}
+
+\newcommand{\sign}[1]{\ensuremath{\operatorname{sgn}\left({#1}\right)}}
+% FIELD OPERATORS
+\newcommand{\avg}[1]{\ensuremath{\overline{#1}}}
+\newcommand{\fluct}[1]{\ensuremath{\widetilde{#1}}}
+
+\newcommand{\norm}[2][]{\ensuremath{\left|\left|{#2}\right|\right|\if\relax\detokenize{#1}\relax\else _{#1}\fi}}
+% TENSOR OPERATORS
+\newcommand{\transpose}[1]{\ensuremath{{#1}^{\text T}}}
+\newcommand{\inverse}[1]{\ensuremath{{#1}^{-1}}}
+\newcommand{\invtranspose}[1]{\ensuremath{{#1}^{\text{-T}}}}
+\newcommand{\symmetric}[1]{\ensuremath{\operatorname{sym}{#1}}}
+\newcommand{\deviatoric}[1]{\ensuremath{\operatorname{dev}{#1}}}
+\newcommand{\determinant}[1]{\ensuremath{\operatorname{det}{#1}}}
+% TENSOR AND VECTOR DERIVATIVES
+\newcommand{\grad}[1][]{\ensuremath{\operatorname{grad}{#1}}}
+\newcommand{\Grad}[1][]{\ensuremath{\operatorname{Grad}{#1}}}
+\newcommand{\divergence}[1][]{\ensuremath{\operatorname{div}{#1}}}
+\newcommand{\Divergence}[1][]{\ensuremath{\operatorname{Div}{#1}}}
+\newcommand{\curl}[1][]{\ensuremath{\operatorname{curl}{#1}}}
+\newcommand{\Curl}[1][]{\ensuremath{\operatorname{Curl}{#1}}}
+
+\newcommand{\totalder}[2]{\ensuremath{\frac{\inc{#1}}{\inc{#2}}}}
+\newcommand{\partialder}[2]{\ensuremath{\frac{\partial{#1}}{\partial{#2}}}}
+
+\newcommand{\inc}[1]{\ensuremath{\text d{#1}}}
+\newcommand{\abs}[1]{\ensuremath{\left|{#1}\right|}}
+
+
+\newcommand{\FT}[1]{\ensuremath{\mathcal F\left[{#1}\right]}}
+\newcommand{\invFT}[1]{\ensuremath{\mathcal F^{-1}\left[{#1}\right]}}
+
+\newcommand{\cauchy}{\ensuremath{\tnsr \sigma}}
+
+\newcommand{\residuum}{\ensuremath{\tnsr R}}
+\newcommand{\domain}[1]{\ensuremath{\mathcal{#1}}}
+
+%TENSORS AND VECTORS
+\newcommand{\tnsrfour}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\tnsr}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\tnsrgreek}[1]{\ensuremath{\bm{#1}}}
+\newcommand{\vctr}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\vctrgreek}[1]{\ensuremath{\bm{#1}}}
+% SPECIAL TENSORS
+\newcommand{\eyetwo}{\ensuremath{\tnsr I}}
+\newcommand{\eyefour}{\ensuremath{\tnsrfour I}}
+
+% VARIABLES
+
+\newcommand{\defmap}{\ensuremath{\vctrgreek{\chi}}}
+
+\newcommand{\stiffness}{\tnsrfour C}
+
+% first Piola-Kirchhoff stress
+\newcommand{\fPK}{\ensuremath{\tnsr P}}
+\newcommand{\fPKcomponent}{\ensuremath{P}}
+\newcommand{\fPKavg}{\ensuremath{\avg{\fPK}}}
+% second Piola-Kirchhoff stress
+\newcommand{\sPK}{\ensuremath{\tnsr S}}
+% deformation gradient
+\newcommand{\F}[1][]{\ensuremath{\tnsr F^{#1}}}
+\newcommand{\Fcomponent}[1][]{\ensuremath{F^{#1}}}
+\newcommand{\Fdot}[1][]{\ensuremath{\dot{\F}^{#1}}}
+\newcommand{\Favg}{\ensuremath{\avg{\F}}}
+\newcommand{\Ffluct}{\ensuremath{\fluct{\F}}}
+% strain
+\newcommand{\E}{\tnsr E}
+\newcommand{\GL}{\ensuremath{\tnsr E_\text{e}}}
+% plastic deformation gradient gradient
+\newcommand{\Fp}[1][]{\ensuremath{\tnsr F_\text{p}^{#1}}}
+\newcommand{\Fpdot}[1][]{\ensuremath{\dot{\tnsr F}_\text{p}^{#1}}}
+\newcommand{\Fpo}[1][]{\ensuremath{\tnsr F_\text{p#10}}}
+\newcommand{\Fpinv}[1][]{\ensuremath{\inverse{\Fp}}}
+\newcommand{\Fpinvtranspose}[1][]{\invtranspose{\Fp}}
+% elastic deformation gradient gradient
+\newcommand{\Fe}[1][]{\ensuremath{\tnsr F_\text{e}^{#1}}}
+\newcommand{\Feinv}[1][]{\ensuremath{\inverse{\Fe}}}
+% velocity gradient
+\newcommand{\velgrad}{\ensuremath{\tnsr L}}
+\newcommand{\Lp}{\ensuremath{\tnsr L_\text{p}}}
+\newcommand{\Lpguess}{\ensuremath{\widetilde{\tnsr L_\text{p}}}}
+\newcommand{\Lpo}[1][]{\ensuremath{\tnsr L_\text{p#10}}}
+
+\newcommand{\burgers}[1]{\ensuremath{\vctr b^{#1}}}
+\newcommand{\n}[1]{\ensuremath{\vctr n^{#1}}}
+\newcommand{\m}[1]{\ensuremath{\vctr m^{#1}}}
+\newcommand{\velocity}[2]{\ensuremath{v^{#1}_\text{#2}}}
+\newcommand{\galpha}{\ensuremath{\gamma^{\alpha}}}
+\newcommand{\dotgalpha}{\ensuremath{\dot{\gamma}^{\alpha}}}
+\newcommand{\cs}{\ensuremath{\tnsrgreek \sigma}}
+\newcommand{\act}{\ensuremath{}}
+
+\newcommand{\dblCont}{\ensuremath{:}}
+\newcommand{\dblContInOut}{\ensuremath{{\scriptscriptstyle\bullet\circ}}}
+\newcommand{\dblContOutIn}{\ensuremath{{\scriptscriptstyle\circ\bullet}}}
+
+\newcommand{\dfedf}{\totalder{\Fe}{\F}}
+\newcommand{\dfedEe}{\totalder{\Fe}{\GL}}
+\newcommand{\dcsdE}{\totalder{\cauchy}{\tnsr E}}
+\newcommand{\dsdf}{\totalder{\sPK}{\F}}
+\newcommand{\dfds}{\totalder{\F}{\sPK}}
+\newcommand{\dsdfe}{\totalder{\sPK}{\Fe}}
+\newcommand{\dpdf}{\totalder{\fPK}{\F}}
+\newcommand{\dlpdf}{\totalder{\Lp}{\F}}
+\newcommand{\dlpds}{\totalder{\Lp}{\sPK}}
+\newcommand{\dfpinvdf}{\totalder{\Fpinv}{\F}}
+\newcommand{\dfpinvdt}{\totalder{\Fpinv}{\text{t}}}
+\newcommand{\dfpinvdlp}{\totalder{\Fpinv}{\Lp}}
+
+\newcommand{\explp}{\exp\left[-\alpha \Delta t\Lp\right]}
+\newcommand{\explpo}{\exp\left[-\frac{\left(1-\alpha \right)\Delta t\Lpo}{2}\right]}
+
+\newcommand{\state}{\ensuremath{\vctr\omega}}
+\newcommand{\constLp}{\Lp}
+\newcommand{\constDotState}{\ensuremath{g}}
+\newcommand{\constDeltaState}{\ensuremath{g_\Delta}}
+\newcommand{\slipsystem}{\ensuremath{\xi}}
+\newcommand{\shearrate}[2]{\ensuremath{\dot{\gamma}^{#1}_{#2}}}
+\newcommand{\slipdirection}[1]{\ensuremath{\vctr s^{#1}}}
+\newcommand{\slipnormal}[1]{\ensuremath{\vctr n^{#1}}}
+\newcommand{\resolvedstress}[1]{\ensuremath{\tau^{#1}}}
+
+\newcommand{\density}[2]{\ensuremath{\varrho^{#1}_{#2}}}
+\newcommand{\burgerslength}{\ensuremath{b}}
+\newcommand{\sliptangent}[1]{\ensuremath{\vctr t^{#1}}}
+\newcommand{\meanfreepath}[1][]{\ensuremath{\lambda_\text{#1}}}
+\newcommand{\viscosity}[1]{\ensuremath{\eta^{#1}}}
+
+\newcommand{\activationvolume}[1][]{\ensuremath{V_\text{#1}}}
+
+
+\newcommand{\Eshelby}{\term{Eshelby}}
+\newcommand{\Euler}{\term{Euler}}
+\newcommand{\Gauss}{\term{Gauss}}
+\newcommand{\KN}{\term{Kr\"oner}--\term{Nye}}
+\newcommand{\PK}{\term{Piola}--\term{Kirchhoff}}
+\newcommand{\Cauchy}{\term{Cauchy}}
+\newcommand{\NR}{\term{Newton}--\term{Raphson}}
+\newcommand{\Frobenius}{\term{Frobenius}}
+\newcommand{\RK}{\term{Runge}--\term{Kutta}}
+\newcommand{\Schmid}{\term{Schmid}}
+\newcommand{\Miller}{\term{Miller}}
+\newcommand{\Fourier}{\term{Fourier}}
+
+\newcommand{\steplength}{\ensuremath{\alpha}}
+\newcommand{\Lpcorrection}{\ensuremath{\Delta\Lp}}
+\newcommand{\tnsrder}[2]{\ensuremath{{#1},_{\scriptscriptstyle {#2}}}}
+\newcommand{\tnsrderIJKL}[2]{\ensuremath{{#1};_{\scriptscriptstyle {#2}}}}
+\newcommand{\error}{\ensuremath{\epsilon}}
+
+% nameref no capitals
+\newcommand{\lnameref}[1]{%
+\bgroup
+\let\nmu\MakeLowercase
+\nameref{#1}\egroup}
+\newcommand{\fnameref}[1]{%
+\bgroup
+\def\nmu{\let\nmu\MakeLowercase}%
+\nameref{#1}\egroup}
+
+\newcommand{\nmu}{}
+
+\newcommand{\strain}{\ensuremath{\varepsilon_\mathrm{11}}\xspace} %strain in loading direction
+\newcommand{\straVm}{\ensuremath{\varepsilon_\mathrm{vM}}\xspace} %Von Mises Strain
+\newcommand{\stress}{\ensuremath{\sigma_\mathrm{11}}\xspace} %stress in loading direction
+\newcommand{\streVm}{\ensuremath{\sigma_\mathrm{vM}}\xspace} %Von Mises Stress
+\newcommand{\strainF}{\ensuremath{\varepsilon_\mathrm{11}}\xspace} %strain in loading direction
+\newcommand{\straVmF}{\ensuremath{\varepsilon_\mathrm{vM}}\xspace} %Von Mises Strain
+\newcommand{\stressF}{\ensuremath{\sigma_\mathrm{11}}\xspace} %stress in loading direction
+\newcommand{\streVmF}{\ensuremath{\sigma_\mathrm{vM}}\xspace} %Von Mises Stress
+
+
+\DeclareSIUnit{\wtpercent}{wt\%}
+\usepackage[normalem]{ulem} %strike out 
