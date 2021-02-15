@@ -1,0 +1,24 @@
+\newcommand{\norm}[2][]{\ensuremath{\left|\left|{#2}\right|\right|\if\relax\detokenize{#1}\relax\else _{#1}\fi}}
+% TENSOR OPERATORS
+\newcommand{\transpose}[1]{\ensuremath{{#1}^{\text T}}}
+\newcommand{\inverse}[1]{\ensuremath{{#1}^{-1}}}
+\newcommand{\invtranspose}[1]{\ensuremath{{#1}^{\text{-T}}}}
+\newcommand{\symmetric}[1]{\ensuremath{\operatorname{sym}{#1}}}
+\newcommand{\deviatoric}[1]{\ensuremath{\operatorname{dev}{#1}}}
+\newcommand{\determinant}[1]{\ensuremath{\operatorname{det}{#1}}}
+% TENSOR AND VECTOR DERIVATIVES
+\newcommand{\grad}[1][]{\ensuremath{\operatorname{grad}{#1}}}
+\newcommand{\Grad}[1][]{\ensuremath{\operatorname{Grad}{#1}}}
+\newcommand{\divergence}[1][]{\ensuremath{\operatorname{div}{#1}}}
+\newcommand{\Divergence}[1][]{\ensuremath{\operatorname{Div}{#1}}}
+\newcommand{\curl}[1][]{\ensuremath{\operatorname{curl}{#1}}}
+\newcommand{\Curl}[1][]{\ensuremath{\operatorname{Curl}{#1}}}
+%TENSORS AND VECTORS
+\newcommand{\tnsrfour}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\tnsr}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\tnsrgreek}[1]{\ensuremath{\bm{#1}}}
+\newcommand{\vctr}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\vctrgreek}[1]{\ensuremath{\bm{#1}}}
+% SPECIAL TENSORS
+\newcommand{\eyetwo}{\ensuremath{\tnsr I}}
+\newcommand{\eyefour}{\ensuremath{\tnsrfour I}}
