@@ -1,10 +1,18 @@
 #! /usr/bin/env sh
 
-mkdir -p ${1}/backend
+if [ -z ${1} ]; then echo "No directory given" && exit 1;fi
+
 SCRIPT=$(readlink -f ${0})
 SCRIPTPATH=$(dirname ${SCRIPT})
-echo $SCRIPTPATH
+INSTALLPATH=$(readlink -f ${1})
+
+echo install from ${SCRIPTPATH} to ${INSTALLPATH}
+
+if [ -d ${INSTALLPATH}/backend ]; then mv ${INSTALLPATH}/backend ${INSTALLPATH}/backend_backup;fi
+mkdir ${INSTALLPATH}/backend
+
+
 for FILE in ${SCRIPTPATH}/backend/*
-    do ln ${FILE} $(readlink -f ${1})/backend/
+  do ln ${FILE} ${INSTALLPATH}/backend/
 done
-cp ${SCRIPTPATH}/*.tex ${1}
+cp ${SCRIPTPATH}/*.tex ${INSTALLPATH}
