@@ -15,7 +15,6 @@ mkdir ${INSTALLPATH}/backend
 for FILE in ${SCRIPTPATH}/backend/*
   do ln ${FILE} ${INSTALLPATH}/backend/
 done
-touch ${INSTALLPATH}/.gitignore
 ln ${SCRIPTPATH}/.gitignore ${INSTALLPATH}/
 
 cp ${SCRIPTPATH}/*.tex ${INSTALLPATH}
