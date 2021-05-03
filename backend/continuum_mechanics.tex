@@ -1,0 +1,52 @@
+\newcommand{\domain}[1]{\ensuremath{\mathcal{#1}}}
+
+% VARIABLES
+\newcommand{\defmap}{\ensuremath{\vctrgreek{\chi}}}
+
+\newcommand{\stiffness}{\tnsrfour C}
+
+% first Piola-Kirchhoff stress
+\newcommand{\fPK}{\ensuremath{\tnsr P}}
+\newcommand{\fPKcomponent}{\ensuremath{P}}
+\newcommand{\fPKavg}{\ensuremath{\avg{\fPK}}}
+% second Piola-Kirchhoff stress
+\newcommand{\sPK}{\ensuremath{\tnsr S}}
+% deformation gradient
+\newcommand{\F}[1][]{\ensuremath{\tnsr F^{#1}}}
+\newcommand{\Fcomponent}[1][]{\ensuremath{F^{#1}}}
+\newcommand{\Fdot}[1][]{\ensuremath{\dot{\F}^{#1}}}
+\newcommand{\Favg}{\ensuremath{\avg{\F}}}
+\newcommand{\Ffluct}{\ensuremath{\fluct{\F}}}
+% strain
+\newcommand{\E}{\tnsr E}
+\newcommand{\GL}{\ensuremath{\tnsr E_\text{e}}}
+% plastic deformation gradient gradient
+\newcommand{\Fp}[1][]{\ensuremath{\tnsr F_\text{p}^{#1}}}
+\newcommand{\Fpdot}[1][]{\ensuremath{\dot{\tnsr F}_\text{p}^{#1}}}
+\newcommand{\Fpo}[1][]{\ensuremath{\tnsr F_\text{p#10}}}
+\newcommand{\Fpinv}[1][]{\ensuremath{\inverse{\Fp}}}
+\newcommand{\Fpinvtranspose}[1][]{\invtranspose{\Fp}}
+% elastic deformation gradient gradient
+\newcommand{\Fe}[1][]{\ensuremath{\tnsr F_\text{e}^{#1}}}
+\newcommand{\Feinv}[1][]{\ensuremath{\inverse{\Fe}}}
+\newcommand{\Fi}[1][]{\ensuremath{\tnsr F_\text{i}^{#1}}}
+% velocity gradient
+\newcommand{\velgrad}{\ensuremath{\tnsr L}}
+\newcommand{\Lp}{\ensuremath{\tnsr L_\text{p}}}
+\newcommand{\Li}{\ensuremath{\tnsr i_\text{p}}}
+\newcommand{\Lpguess}{\ensuremath{\widetilde{\tnsr L_\text{p}}}}
+\newcommand{\Lpo}[1][]{\ensuremath{\tnsr L_\text{p#10}}}
+
+
+\newcommand{\dfedf}{\totalder{\Fe}{\F}}
+\newcommand{\dfedEe}{\totalder{\Fe}{\GL}}
+\newcommand{\dcsdE}{\totalder{\cauchy}{\tnsr E}}
+\newcommand{\dsdf}{\totalder{\sPK}{\F}}
+\newcommand{\dfds}{\totalder{\F}{\sPK}}
+\newcommand{\dsdfe}{\totalder{\sPK}{\Fe}}
+\newcommand{\dpdf}{\totalder{\fPK}{\F}}
+\newcommand{\dlpdf}{\totalder{\Lp}{\F}}
+\newcommand{\dlpds}{\totalder{\Lp}{\sPK}}
+\newcommand{\dfpinvdf}{\totalder{\Fpinv}{\F}}
+\newcommand{\dfpinvdt}{\totalder{\Fpinv}{\text{t}}}
+\newcommand{\dfpinvdlp}{\totalder{\Fpinv}{\Lp}}
